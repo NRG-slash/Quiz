@@ -37,12 +37,14 @@ public class Question5 extends AppCompatActivity{
         AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Intent goToAnswer = new Intent(Question5.this,FinalResults.java);
+                Intent goToAnswer = new Intent(Question5.this, FinalResultsActivity.class);
 
-                goToAnswer.putExtra("SCORE_EXTRA", getIntent().getIntExtra("SCORE_EXTRA", 0)+ position*10);
+                goToAnswer.putExtra("SCORE_EXTRA", getIntent().getIntExtra("SCORE_EXTRA", 0) + position*10);
 
                 startActivity(goToAnswer);
             }
         };
+        qQuestion5.setAdapter(arrayAdapter);
+        qQuestion5.setOnItemClickListener(itemClickListener);
     }
 }

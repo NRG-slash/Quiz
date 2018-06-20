@@ -39,5 +39,8 @@ public class Question2 extends AppCompatActivity {
             }
         };
 
+            qQuestion2.setAdapter(arrayAdapter);
+            qQuestion2.setOnItemClickListener(itemClickListener);
+
     }
 }

@@ -42,5 +42,8 @@ public class Question4 extends AppCompatActivity {
                 startActivity(goToQuestion5);
             }
         };
+
+        qQuestion4.setAdapter(arrayAdapter);
+        qQuestion4.setOnItemClickListener(itemClickListener);
     }
 }

@@ -39,10 +39,13 @@ public class Question3 extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Intent goToQuestion4 = new Intent(Question3.this, Question4.class);
 
-                goToQuestion4.putExtra("SCORE_Extra",getIntent().getIntExtra("SCORE_EXTRA", 0) + position*10);
+                goToQuestion4.putExtra("SCORE_EXTRA",getIntent().getIntExtra("SCORE_EXTRA", 0) + position*10);
 
                 startActivity(goToQuestion4);
             }
         };
+
+        qQuestion3.setAdapter(arrayAdapter);
+        qQuestion3.setOnItemClickListener(itemClickListener);
     }
 }
